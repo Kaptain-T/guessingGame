@@ -25,10 +25,14 @@ body{
     width: fit-content;
 }
 .replay span{
-    margin-left: 10px;
+    margin-left: 5px;
 }
 .replay, .gameSection{
     flex: 1;
+}
+.fa-solid{
+    width: 25px;
+    height: 25px;
 }
 .compDisplay{
     display: flex;
