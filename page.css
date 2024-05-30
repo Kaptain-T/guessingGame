@@ -97,3 +97,18 @@ button:focus, button:hover{
     font-size: 20px;
     font-weight: 600;
 }
+
+
+@media screen and (max-width: 400px) {
+    .gameSection{
+        display: flex;
+        flex-direction: column;
+    }
+
+    button, input{
+        margin-left: 0;
+        margin-bottom: 20px;
+        width: 70%;
+    }
+
+}
