@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root{
-    --blue: rgba(4, 4, 5, 0.767);
+    --blue: #009687;
 }
 
 *{
@@ -12,8 +12,8 @@
 
 body{
     background-color: var(--blue);
-    width: 100dvw;
-    height: 100dvh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -21,9 +21,32 @@ body{
 
 .replay{
     cursor: pointer;
+    font-size: 2rem;
+    width: fit-content;
+}
+.replay span{
+    margin-left: 10px;
 }
 .replay, .gameSection{
     flex: 1;
+}
+.compDisplay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: fit-content;
+    /* max-width: 200px;
+    aspect-ratio: 1; */
+    font-size:80px;
+    font-weight: bold;
+}
+.compDisplay img{
+    max-width: 200px;
+    aspect-ratio: 1;
+}
+.gameSection{
+    display: flex;
+    align-items: center;
 }
 p{
     font-size: 25px;
@@ -31,7 +54,7 @@ p{
     align-items: center;
 }
 
-.gameSection, .messages, .compdisplay{
+.gameSection, .messages, .compDisplay{
     align-self: center;
     margin-bottom: 20px;
 }
@@ -45,18 +68,18 @@ input{
     border: none;
     border-radius: 0.5rem;
     padding-inline: 20px;
+    font-size: clamp(18px, 1.3em, 1.5em) ;
 }
 
 input:focus, input:hover{
-    border-bottom: 2px solid black;
-    outline: none;
+    outline: 2px solid green;
 }
 button{
     width: 20vw;
     height: 42px;
     border: none;
     border-radius: 0.5rem;
-    margin-left: 15px;
+    margin-left: 20px;
     cursor: pointer;
     font-size: clamp(18px, 1.3em, 1.5em);
 }
@@ -64,9 +87,9 @@ button{
 button:focus, button:hover{
     /* outline: 2px solid black; */
     outline: none;
-    background-color: var(--blue);
+    background-color: #009687;
     color: white;
-    border-bottom: 2px solid black;
+    border: 2px solid white;
 }
 
 .trials{
