@@ -40,6 +40,7 @@ play.addEventListener("click", function(){
         document.querySelector(
           ".compDisplay"
         ).innerHTML = `It was ${computerNumber}`;
+        document.querySelector(".trials").style.color = "white"
       } else {
         displaymessage("Correct! ✅");
         document.querySelector("body").style.backgroundColor = "yellow";
@@ -62,5 +63,6 @@ document.querySelector(".replay").addEventListener("click", function(){
     computerNumber = Math.trunc(Math.random() * 100 + 1);
     chances = 3
     trialsLeft.textContent = 3
+    document.querySelector(".trials").style.color = "black";
 
 })

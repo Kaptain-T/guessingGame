@@ -35,9 +35,9 @@ body{
     align-items: center;
     justify-content: center;
     min-width: fit-content;
-    /* max-width: 200px;
-    aspect-ratio: 1; */
-    font-size:80px;
+    max-width: 250px;
+    text-align: center;
+    font-size:clamp(10vw, 80px, 80px);
     font-weight: bold;
 }
 .compDisplay img{
@@ -56,11 +56,13 @@ p{
 
 .gameSection, .messages, .compDisplay{
     align-self: center;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 .messages{
     font-size: 1.5rem;
     color: white;
+    text-align: center;
+    padding: 20px;
 }
 input{
     width: 40vw;
@@ -68,7 +70,8 @@ input{
     border: none;
     border-radius: 0.5rem;
     padding-inline: 20px;
-    font-size: clamp(18px, 1.3em, 1.5em) ;
+    font-size: clamp(15px, 1.3em, 1.5em) ;
+    font-weight: 600;
 }
 
 input:focus, input:hover{
@@ -81,7 +84,8 @@ button{
     border-radius: 0.5rem;
     margin-left: 20px;
     cursor: pointer;
-    font-size: clamp(18px, 1.3em, 1.5em);
+    font-weight: 600;
+    font-size: clamp(15px, 1.3em, 1.5em);
 }
 
 button:focus, button:hover{
@@ -103,6 +107,7 @@ button:focus, button:hover{
     body{
         gap: 30px;
     }
+
     .gameSection{
         display: flex;
         flex-direction: column;
