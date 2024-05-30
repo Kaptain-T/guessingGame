@@ -100,6 +100,9 @@ button:focus, button:hover{
 
 
 @media screen and (max-width: 400px) {
+    body{
+        gap: 30px;
+    }
     .gameSection{
         display: flex;
         flex-direction: column;
