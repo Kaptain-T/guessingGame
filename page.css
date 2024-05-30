@@ -116,7 +116,11 @@ button:focus, button:hover{
     button, input{
         margin-left: 0;
         margin-bottom: 20px;
-        width: 70%;
+        width: 85%;
     }
+
+    .gameSection, .messages, .compDisplay{
+    margin: 0;
+}
 
 }
