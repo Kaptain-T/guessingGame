@@ -69,6 +69,7 @@ document.querySelector(".replay").addEventListener("click", function(){
     computerNumber = Math.trunc(Math.random() * 100 + 1);
     chances = 3
     trialsLeft.textContent = 3
+    userInputField.value = ""
     document.querySelector(".trials").style.color = "black";
     document.querySelector(
       ".compDisplay"
