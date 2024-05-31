@@ -17,7 +17,6 @@ function displaymessage(message) {
 // WHEN USER CLICKS/TAPS PLAY
 play.addEventListener("click", function(){
     let userInput = Number(userInputField.value);
-    console.log(Number.isNaN(userInput))
 
     // IF ACTIVE IS TRUE AND IF INPUT FIELD IS NOT EMPTY
     if(active && !(userInput == "")){
@@ -26,7 +25,6 @@ play.addEventListener("click", function(){
           userInput < 100 &&
           Number.isInteger(userInput)
         ) {
-          console.log(computerNumber);
           if (userInput > computerNumber && chances > 1) {
             displaymessage("Too high 📈");
             chances--;
@@ -38,7 +36,7 @@ play.addEventListener("click", function(){
           } else if ((chances = 1)) {
             trialsLeft.textContent = 0;
             document.querySelector("body").style.backgroundColor = "red";
-            displaymessage("You lose!🚫 Click repeat to try again!");
+            displaymessage("You lose!🚫 Click replay to try again!");
             active = false;
             document.querySelector(
               ".compDisplay"
@@ -63,6 +61,7 @@ play.addEventListener("click", function(){
     }
 })
 
+// WHEN USER CLICKS/TAPS REPLAY
 document.querySelector(".replay").addEventListener("click", function(){
     displaymessage("Play to guess!")
     document.querySelector("body").style.backgroundColor = "#009687";
@@ -70,5 +69,7 @@ document.querySelector(".replay").addEventListener("click", function(){
     chances = 3
     trialsLeft.textContent = 3
     document.querySelector(".trials").style.color = "black";
-
+    document.querySelector(
+      ".compDisplay"
+    ).innerHTML = `<img src="./guess.jpg" alt="image" id="image">`;
 })
