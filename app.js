@@ -63,6 +63,7 @@ play.addEventListener("click", function(){
 
 // WHEN USER CLICKS/TAPS REPLAY
 document.querySelector(".replay").addEventListener("click", function(){
+    active = true
     displaymessage("Play to guess!")
     document.querySelector("body").style.backgroundColor = "#009687";
     computerNumber = Math.trunc(Math.random() * 100 + 1);
